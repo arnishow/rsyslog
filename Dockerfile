@@ -1,7 +1,6 @@
 FROM alpine:3.4
 
-RUN apk add --update rsyslog
-RUN rm -rf /var/cache/apk/*
+RUN apk add --no-cache rsyslog
 
 COPY rsyslog.conf /etc/rsyslog.conf
 
